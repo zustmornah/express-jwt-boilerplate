@@ -7,13 +7,13 @@ Everything is well tested with [mocha](https://mochajs.org), [chai](http://chaij
 
 ## Dependencies
 
-* express
-* body-parser
-* jsonwebtoken
-* chai
-* mocha
-* sinon
-* supertest
+-   express
+-   body-parser
+-   jsonwebtoken
+-   chai
+-   mocha
+-   sinon
+-   supertest
 
 ## Scripts
 
@@ -33,12 +33,12 @@ yarn install
 npm install
 ```
 
-Edit `config.example.js` and save it as `config.js` :
+Edit `config.js` as:
 
 ```
 module.exports = {
     port: 8080,
-    jwtSecret: 'your jwt secret'
+    jwtSecret: 'YOUR JWT SECRET HERE'
 };
 ```
 
@@ -48,7 +48,7 @@ Run tests :
 npm run test
 ```
 
-If everything is OK, run the project :
+Run the project :
 
 ```
 npm start
@@ -74,7 +74,7 @@ You should get back something like :
 }
 ```
 
-Now, when you want to load `http://localhost:8080/api/hello-world` and you send there `Authorization` header with _jwt token_ from the previous response, you should be successful :
+Now, in loading `http://localhost:8080/api/hello-world`, you set your `Authorization` header with _jwt token_ from the previous response, you should be successful :
 
 ```
 curl -XGET -H 'Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNDg3NjM3OTg0LCJleHAiOjE0ODc2NDE1ODR9.1jMwROveQeR64baJOPdZV4SdpmKKVRvgPg0wJX9sHnI' 'http://localhost:8080/api/hello-world'
